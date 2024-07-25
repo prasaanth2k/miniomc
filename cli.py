@@ -1,5 +1,5 @@
-from minomc import Miniomc
-import json
-clientmc = Miniomc()
+from miniomc import MinioadminMc
 
-clientmc.list_all_alias()
+c = MinioadminMc(databasename="snadb")
+value = c.getadmininfo()
+print(value.info['pools'])
